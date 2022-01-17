@@ -1,9 +1,24 @@
 package com.mperhoc.networkapp.net;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.mperhoc.networkapp.exception.IPFormatException;
 import com.mperhoc.networkapp.exception.IPOutOfBoundsException;
 
 public class IpAddress {
+	public static final String CLASS_A_IP = "10.";
+	public static final String CLASS_B_IP = "172.16.";
+	public static final String CLASS_C_IP = "192.168.";
+
+	public static Map<String, String> privateAddressLimits = new HashMap<String, String>();
+
+	static {
+		privateAddressLimits.put(CLASS_A_IP, "255.0.0.0");
+		privateAddressLimits.put(CLASS_B_IP, "255.240.0.0");
+		privateAddressLimits.put(CLASS_C_IP, "255.255.0.0");
+	}
+
 	private String ip;
 	private final int base;
 

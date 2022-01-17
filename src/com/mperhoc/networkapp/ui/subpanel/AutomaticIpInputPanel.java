@@ -23,7 +23,7 @@ public class AutomaticIpInputPanel extends JPanel {
 		addressInput = new JTextField(22);
 		userNumberInput = new JTextField(22);
 
-		addressLabel = new JLabel("IP Address:");
+		addressLabel = new JLabel("IP address:");
 		userNumberLabel = new JLabel("Number of devices:");
 
 		add(addressLabel);

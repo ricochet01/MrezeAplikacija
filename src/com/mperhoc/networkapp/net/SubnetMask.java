@@ -93,7 +93,7 @@ public class SubnetMask {
 		return numberOfHostBits;
 	}
 
-	protected int getNumberOfAvailableAddresses() {
+	public int getNumberOfAvailableAddresses() {
 		return (int) (Math.pow(2, numberOfHostBits) - 2);
 	}
 
